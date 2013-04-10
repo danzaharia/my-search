@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+                           http://www.springframework.org/schema/util 
+                           http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<util:map id="searchUrlMap" map-class="java.util.HashMap"
+		key-type="java.lang.String" value-type="java.util.ArrayList">
+		<entry>
+			<key>
+				<value>people</value>
+			</key>
+			<util:list id="peopleSearchUrls" value-type="java.lang.String">
+				<value>http://www.facebook.com/search/results.php?q=${searchValue}</value>
+				<value>http://www.intelius.com/results.php?ReportType=1&amp;formname=name&amp;qf=${searchValue}&amp;qmi=&amp;qn=${searchValue}</value>
+			</util:list>
+		</entry>
+
+		<entry>
+			<key>
+				<value>text</value>
+			</key>
+			<util:list id="textSearchUrls" value-type="java.lang.String">
+				<value>http://www.google.com/search?q=${searchValue}</value>
+			</util:list>
+		</entry>
+	</util:map>
+
+</beans>

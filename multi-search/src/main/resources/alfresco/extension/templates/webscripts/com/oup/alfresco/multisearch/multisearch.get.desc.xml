@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Multi Search</shortname>
+	<description>Multiple search for contents</description>
+	<url>/multisearch?type={type}&amp;searchValue={value}</url>
+	<format default="json">extension</format>
+</webscript>

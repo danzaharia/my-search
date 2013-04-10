@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- <parent> <groupId>com.oup</groupId> <artifactId>oup-bulkmetadata-template</artifactId> 
+		<version>4.1.1.1.1-SNAPSHOT</version> </parent> -->
+
+	<artifactId>multi-search</artifactId>
+	<groupId>com.oup</groupId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring.surf.version>1.2.0</spring.surf.version>
+		<alfresco.version>4.1.1</alfresco.version>
+		<ixxus.sdk.classifier>alf-sdk-${alfresco.version}</ixxus.sdk.classifier>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>oup-nexus</id>
+			<url>https://nexoup.ixxus.co.uk/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>oup-releases</id>
+			<url>https://nexoup.ixxus.co.uk/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>oup-snapshots</id>
+			<url>https://nexoup.ixxus.co.uk/content/repositories/snapshots</url>
+		</repository>
+		<repository>
+			<id>oss-sonatype-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ixxus.alfresco.sdk.org.springframework.extensions.surf</groupId>
+			<artifactId>spring-webscripts</artifactId>
+			<version>${spring.surf.version}</version>
+			<classifier>${ixxus.sdk.classifier}</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ixxus.alfresco</groupId>
+			<artifactId>alfresco-config</artifactId>
+			<version>4.1.2.0.0.1</version>
+			<!-- <scope>provided</scope> -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.ixxus.alfresco</groupId>
+			<artifactId>ixxus-category-i18n-alfresco</artifactId>
+			<version>4.1.1.2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.14</version>
+		</dependency>
+
+	</dependencies>
+
+
+</project>
